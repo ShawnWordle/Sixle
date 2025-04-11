@@ -1,0 +1,248 @@
+/* Styles for Header */
+h1 {
+  font-size: 2.5em;
+  font-family: 'Arial', sans-serif; /* Clean and modern */
+  text-align: center;
+  color: #3f3f3f; /* Matches your adjusted color scheme */
+  margin-bottom: 0.2em;
+}
+
+p {
+  font-size: 1.2em;
+  font-family: 'Georgia', serif; /* Elegant serif font for subtext */
+  text-align: center;
+  color: rgb(63, 63, 63); /* Aligned with the color adjustment for visibility */
+  margin: 0.5em 0;
+}
+
+/* ------------------------------
+   Responsive Container Settings
+------------------------------ */
+#game-board,
+#keyboard {
+  max-width: 90%;           /* Keeps content narrow on larger screens */
+  margin: 0 auto;           /* Center horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ------------------------------
+   Guess Rows and Guess Cells
+------------------------------ */
+.guess-row {
+  display: flex;
+  justify-content: center;
+  gap: 0.2em;               /* Subtle spacing between cells */
+  margin-bottom: 0.5em;      /* Spacing between rows */
+  width: 100%;
+}
+
+.guess-cell {
+  border: 1px solid #8f8514;  /* Your original border color */
+  width: 3em;                 /* Original width */
+  height: 3em;                /* Original height */
+  margin: 0.3em;              /* Spacing between cells */
+  text-align: center;
+  line-height: 3em;           /* Vertical centering */
+  font-size: 1.3em;           /* Your original font size */
+  font-family: 'Georgia', serif;
+  color: #1fca29;             /* Your original text colour */
+  border-radius: 0.3em;       /* Rounded corners */
+  box-sizing: border-box;     /* Prevent sizing issues */
+}
+
+/* Optional: State styling for guess cells if using data-state attributes */
+.guess-cell[data-state="correct"] {
+  background-color: green;
+  color: #ffffff;
+}
+
+.guess-cell[data-state="present"] {
+  background-color: yellow;
+  color: #000000;
+}
+
+.guess-cell[data-state="absent"] {
+  background-color: lightgray;
+  color: #666666;
+}
+
+/* ------------------------------
+   Keyboard Container and Keys
+------------------------------ */
+/* ------------------------------
+   Responsive Container Settings
+------------------------------ */
+#game-board,
+#keyboard {
+  max-width: 90%;           /* Keeps content narrow on larger screens */
+  margin: 0 auto;           /* Center horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ------------------------------
+   Guess Rows and Guess Cells
+------------------------------ */
+.guess-row {
+  display: flex;
+  justify-content: center;
+  gap: 0.2em;               /* Subtle spacing between cells */
+  margin-bottom: 0.5em;      /* Spacing between rows */
+  width: 100%;
+}
+
+.guess-cell {
+  border: 1px solid #8f8514;  /* Your original border color */
+  width: 3em;                 /* Original width */
+  height: 3em;                /* Original height */
+  margin: 0.3em;              /* Spacing between cells */
+  text-align: center;
+  line-height: 3em;           /* Vertical centering */
+  font-size: 1.3em;           /* Your original font size */
+  font-family: 'Georgia', serif;
+  color: #1fca29;             /* Your original text colour */
+  border-radius: 0.3em;       /* Rounded corners */
+  box-sizing: border-box;     /* Prevent sizing issues */
+}
+
+/* Optional: State styling for guess cells if using data-state attributes */
+.guess-cell[data-state="correct"] {
+  background-color: green;
+  color: #ffffff;
+}
+
+.guess-cell[data-state="present"] {
+  background-color: yellow;
+  color: #000000;
+}
+
+.guess-cell[data-state="absent"] {
+  background-color: lightgray;
+  color: #666666;
+}
+
+/* ------------------------------
+   Keyboard Container and Keys
+------------------------------ */
+#keyboard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;               /* Space between keyboard rows */
+  margin-top: 20px;
+}
+
+
+.key {
+  /* Ensure a fixed size for all keys */
+  flex: 0 0 2.5em;      /* Don’t grow/shrink, fixed basis */
+  width: 2.5em;         /* Fixed width for letter keys */
+  min-width: 2.5em;
+  height: 2.5em;        /* Fixed height */
+  margin: 0.1em;        /* Minimal margin for tighter spacing */
+  padding: 0.5em;
+  text-align: center;
+  line-height: 2.5em;
+  cursor: pointer;
+  background-color: #888888; /* Your original vibrant key color */
+  color: #ffffff;            /* Text color for keys */
+  border: 1px solid #e8e4d9;  /* Eggshell border */
+  border-radius: 0.3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.key:hover {
+  background-color: #242643; /* Slightly darker on hover */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+
+/* New rule for special keys (DLT and SUB) */
+.key-special {
+  flex: 0 0 3.75em;  /* Increased width for DLT and SUB keys */
+  width: 3.75em;
+  min-width: 3.75em;
+}
+/* ------------------------------
+   Responsive Adjustments for Mobile
+------------------------------ */
+@media (max-width: 600px) {
+  .guess-cell, .key {
+    max-width: 2.2em;   /* Slightly smaller for mobile */
+    height: 2.2em;
+    font-size: 0.9em;   /* Reduced font size */
+  }
+
+  #game-board, #keyboard {
+    max-width: 95%;    /* Use a bit more width on small screens */
+  }
+}
+
+/* ------------------------------
+   Responsive Adjustments for Mobile
+------------------------------ */
+@media (max-width: 600px) {
+  .guess-cell, .key {
+    max-width: 2.2em;   /* Slightly smaller for mobile */
+    height: 2.2em;
+    font-size: 0.9em;   /* Reduced font size */
+  }
+
+  #game-board, #keyboard {
+    max-width: 95%;    /* Use a bit more width on small screens */
+  }
+}
+
+
+/* Landing Page Styles */
+#landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #fff9ed; /* Dark theme for landing page */
+  color: #fff9ed;
+}
+
+#landing-page h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+#landing-page p {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+#play-button {
+  padding: 0.8em 1.5em;
+  font-size: 1.2em;
+  color: #ffffff;
+  background-color: #3f3f3f; /* Button color */
+  border: none;
+  cursor: pointer;
+  border-radius: 0.3em; /* Rounded corners to match the keys */
+}
+
+#play-button:hover {
+  background-color: rgb(36, 38, 67); /* Button hover effect */
+}
+
+#game-page {
+  display: none; /* Initially hidden */
+  background-color: #fffcf9; /* Example: Light grey background */
+  height: 100vh; /* Ensures it covers the full height of the viewport */
+  width: 100%; /* Ensures it covers the full width of the viewport */
+}
+
+/* Target only the 'by Shawn' text in the game-page header */
+#game-page header p:last-of-type {
+  margin-bottom: 1.5em; /* Add space below the 'by Shawn' text */
+}
